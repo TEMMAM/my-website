@@ -6,24 +6,13 @@ body {
     padding: 0;
     color: #f4f4f4;
     background-color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    cursor: url('cursor.svg'), auto; /* Custom cursor */
+    display: block; /* Changed to block */
 }
 
 /* Header styles */
 header {
     position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+    height: auto; /* Flexible height */
     overflow: hidden;
 }
 
@@ -36,7 +25,6 @@ header {
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: 1;
-    border-radius: 0;
 }
 
 .video-fade {
@@ -54,57 +42,45 @@ header {
     z-index: 3;
     text-align: center;
     color: white;
-    padding: 20px;
+    padding: 20px; /* Keep padding for spacing */
     width: 100%;
-    max-width: 800px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Center items */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Full height for centering */
 }
 
 .logo-container {
     position: relative;
 }
 
-.logo-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    height: auto;
-    z-index: -1;
-}
-
 .logo-img {
-    width: 400px;
-    height: auto;
-    margin-bottom: 20px;
+    width: 80%; /* Responsive logo size */
+    max-width: 300px; /* Limit max size */
+    margin-bottom: 20px; /* Add margin below the logo */
 }
 
 .cta-button {
     background: #b487ed;
     color: #fff;
-    padding: 15px 25px;
+    padding: 15px 25px; /* Adjust padding */
     text-decoration: none;
     border-radius: 25px;
     font-weight: bold;
     display: inline-block;
     margin-top: 20px;
     transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #9c6dd8;
+    max-width: 300px; /* Limit size */
+    width: 100%; /* Full width on mobile */
 }
 
 /* Benefits Section */
 .benefits {
-    padding: 40px;
+    padding: 20px; /* Reduced padding */
     background: url('seamless-pattern-01.png') repeat; /* Seamless pattern background */
     text-align: center;
-    width: 100%;
+    width: 80%;
     max-width: 900px;
     margin: 40px auto;
     border-radius: 15px;
@@ -113,61 +89,22 @@ header {
 
 .benefits h3 {
     color: white;
-    font-size: 28px;
+    font-size: 24px; /* Smaller heading for mobile */
     margin-top: 0;
     margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeInTitle 1.5s ease-out forwards;
-    animation-delay: 0.3s;
 }
 
 .benefits ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    opacity: 0;
-    animation: fadeInList 1.5s ease-out forwards;
-    animation-delay: 0.8s;
 }
 
 .benefits li {
     margin: 15px 0;
     color: white;
-    font-size: 16px;
-    opacity: 0;
-    animation: fadeInList 1.5s ease-out forwards;
+    font-size: 14px; /* Smaller text */
     line-height: 1.6;
-}
-
-.benefits li:nth-child(1) {
-    animation-delay: 1.3s;
-}
-
-.benefits li:nth-child(2) {
-    animation-delay: 1.8s;
-}
-
-.benefits li:nth-child(3) {
-    animation-delay: 2.3s;
-}
-
-/* Fade-in keyframes */
-@keyframes fadeInTitle {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInList {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .benefits li .highlight {
@@ -198,8 +135,8 @@ header {
 }
 
 .gallery-item {
-    width: 100%;
-    max-width: 858px;
+    width: 90%; /* Full width for images */
+    max-width: 400px; /* Limit size */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -222,12 +159,13 @@ header {
 }
 
 .contact-box {
-    background: rgba(51, 51, 51, 0.9); /* Slightly transparent to enhance pattern visibility */
+    background: rgba(51, 51, 51, 0.9); /* Slightly transparent */
     border-radius: 15px;
     padding: 20px;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+    overflow: hidden; /* Ensure content stays within the box */
 }
 
 .contact h3 {
@@ -237,12 +175,11 @@ header {
 
 .contact-info {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    gap: 10px; /* Space between items */
     margin-top: 20px;
-    font-size: 16px;
-    color: white;
+    font-size: 14px; /* Adjusted font size */
 }
 
 .contact-info span {
@@ -262,14 +199,10 @@ header {
 }
 
 .contact-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+    width: 20px; /* Adjusted size */
+    height: 20px; /* Adjusted size */
+    margin-right: 5px; /* Reduced margin */
     transition: transform 0.3s ease;
-}
-
-.contact-icon:hover {
-    transform: scale(1.1);
 }
 
 /* Footer Styling */
