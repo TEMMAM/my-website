@@ -1,0 +1,284 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #f4f4f4;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    cursor: url('cursor.svg'), auto; /* Custom cursor */
+}
+
+/* Header styles */
+header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 0;
+}
+
+.video-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+}
+
+.overlay {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    position: relative;
+}
+
+.logo-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: auto;
+    z-index: -1;
+}
+
+.logo-img {
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: #b487ed;
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #9c6dd8;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 40px;
+    background: url('seamless-pattern-01.png') repeat; /* Seamless pattern background */
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.benefits h3 {
+    color: white;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInTitle 1.5s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    animation: fadeInList 1.5s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+.benefits li {
+    margin: 15px 0;
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeInList 1.5s ease-out forwards;
+    line-height: 1.6;
+}
+
+.benefits li:nth-child(1) {
+    animation-delay: 1.3s;
+}
+
+.benefits li:nth-child(2) {
+    animation-delay: 1.8s;
+}
+
+.benefits li:nth-child(3) {
+    animation-delay: 2.3s;
+}
+
+/* Fade-in keyframes */
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInList {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.benefits li .highlight {
+    color: white;
+    font-weight: bold;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 40px 20px;
+    background: transparent;
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.gallery h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    max-width: 858px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    padding: 20px;
+    background: url('seamless-pattern-01.png') repeat; /* Seamless pattern background */
+    border-radius: 15px;
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.contact-box {
+    background: rgba(51, 51, 51, 0.9); /* Slightly transparent to enhance pattern visibility */
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info span a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.contact-info span a:hover {
+    text-decoration: underline;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
